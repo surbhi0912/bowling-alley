@@ -4,29 +4,26 @@ import java.util.List;
 
 public class Player {
     private int totalScore = 0;
-    private List<String> roundResults;
-
-    public Player() {
-    }
+    private List<String> roundsResult;
+    private List<Integer> roundsScore;
 
     public int getTotalScore() {
         return totalScore;
     }
 
-
     public List<String> getResult() {
-        return roundResults;
+        return roundsResult;
     }
 
-    public void setTotalScore(int totalScore) {
-        this.totalScore = totalScore;
+    public void setTotalScore(int roundScore) {
+        this.totalScore += roundScore;
     }
 
     public void setRoundResult(String currentRoundResult) {
-        roundResults.add(currentRoundResult);
+        roundsResult.add(currentRoundResult);
     }
 
-    public void addRoundScore(int roundScore) {
-        this.totalScore += roundScore;
+    public void setRoundScore(int roundScore) {
+        roundsScore.add(roundScore);
     }
 }
